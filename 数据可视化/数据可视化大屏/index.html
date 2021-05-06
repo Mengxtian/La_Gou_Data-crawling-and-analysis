@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>数据可视化</title>
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+	</head>
+	<body>
+		    <header>
+		      <h1>拉勾网职位分析-数据可视化</h1>
+		      <div class="showTime"></div>
+		      <script>
+		        var t = null;
+		        t = setTimeout(time, 1000); //開始运行
+		        function time() {
+		          clearTimeout(t); //清除定时器
+		          dt = new Date();
+		          var y = dt.getFullYear();
+		          var mt = dt.getMonth() + 1;
+		          var day = dt.getDate();
+		          var h = dt.getHours(); //获取时
+		          var m = dt.getMinutes(); //获取分
+		          var s = dt.getSeconds(); //获取秒
+		          document.querySelector(".showTime").innerHTML =
+		            "当前时间：" +
+		            y +
+		            "年" +
+		            mt +
+		            "月" +
+		            day +
+		            "-" +
+		            h +
+		            "时" +
+		            m +
+		            "分" +
+		            s +
+		            "秒";
+		          t = setTimeout(time, 1000); //设定定时器，循环运行
+		        }
+		      </script>
+		    </header>	
+			<div class="mainbox">			
+			<div class="left">
+			    <iframe id="page_1" frameborder="no" scrolling="no" src="js/customized_pie.html"></iframe>
+				<div class="d1 panel" style="color: #FFFFFF; font-size: 1.25rem; font-weight:bold">学历占比</div>
+				<iframe id="page_2" frameborder="no" scrolling="no" src="js/funnel_base.html"></iframe>
+				<div class="d5" style="color: #FFFFFF; font-size: 1.25rem; font-weight:bold">招聘岗位词云</div>
+				<iframe id="page_3" frameborder="no" scrolling="no" src="js/wordcloud_custom_mask_image.html"></iframe>
+			</div>
+			<div id="img">
+				<div class="map1"></div>
+				<div class="map2"></div>
+				<div class="map3"></div>
+				<div class="chart"></div>
+			</div>
+			<div class="center">
+				<div class="d4" style="color: #FFFFFF; font-size: 1.25rem; font-weight:bold">各城市地理位置分析图</div>
+			    <iframe id="page_4" frameborder="no" scrolling="no" src="js/China_ditu.html"></iframe>
+			</div>
+			
+			<div class="right">
+				<div class="d2" style="color: #FFFFFF; font-size: 1.25rem; font-weight:bold">方向占比</div>
+				<iframe id="page_5" frameborder="no" scrolling="no" src="js/pie_set_color.html"></iframe>
+				<div class="d3" style="color: #FFFFFF; font-size: 1.25rem; font-weight:bold">各城市平均工资</div>
+				<iframe id="page_6" frameborder="no" scrolling="no" src="js/city.html"></iframe>	
+				<!-- <iframe id="page_7" frameborder="no" scrolling="no" src="js/wordcloud_custom_mask_image1.html"></iframe> -->
+			</div>
+			
+			</div>
+	</body>
+</html>
